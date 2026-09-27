@@ -1,0 +1,70 @@
+@import "./tokens.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+::selection {
+  background: var(--ochre-soft);
+}
+
+:focus-visible {
+  outline: 2px solid var(--pine);
+  outline-offset: 2px;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: var(--rail-width) 1fr var(--file-width);
+  height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  border-left: 1px solid var(--rule);
+  border-right: 1px solid var(--rule);
+  background: var(--paper);
+}
+
+@media (max-width: 960px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+}
+
+.scroll-y {
+  overflow-y: auto;
+}
+
+.scroll-y::-webkit-scrollbar {
+  width: 8px;
+}
+.scroll-y::-webkit-scrollbar-thumb {
+  background: var(--rule);
+  border-radius: 4px;
+}

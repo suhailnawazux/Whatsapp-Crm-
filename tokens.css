@@ -1,0 +1,39 @@
+:root {
+  /* Color */
+  --paper: #ede9de;         /* warm bone paper, the app's canvas */
+  --panel: #fbfaf6;         /* card/panel surface, slightly lighter than paper */
+  --ink: #21261f;           /* primary text, warm near-black */
+  --ink-muted: #5b5f52;     /* secondary text */
+  --rule: #d4cdb8;          /* hairline dividers, replaces box-shadow */
+  --pine: #33513f;          /* primary brand + action color */
+  --pine-deep: #223a2c;     /* pressed/hover state of pine */
+  --ochre: #b5652d;         /* warm accent — flags, hot leads, unread */
+  --ochre-soft: #e9d3bd;    /* ochre tint for backgrounds */
+  --thread-out: #33513f;    /* outgoing message thread color */
+  --thread-out-ink: #f4f1e8;
+  --thread-in: #ffffff;
+  --thread-in-ink: #21261f;
+
+  /* Stage colors (pipeline) */
+  --stage-new: #7a7e6d;
+  --stage-contacted: #3d6ca8;
+  --stage-negotiating: #b5652d;
+  --stage-won: #33513f;
+  --stage-lost: #96473f;
+
+  /* Type */
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* Layout */
+  --rail-width: 320px;
+  --file-width: 300px;
+  --radius: 3px; /* small, ledger-like corner — not the rounded SaaS-card look */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
